@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { Link } from "react-router-dom";
 import logo from "../assets/logo.svg";
 
 const Navbar = () => {
@@ -15,14 +16,18 @@ const Navbar = () => {
         <img src={logo} alt='' />
       </div>
       <ul className='hidden md:flex'>
-        <li className='p-4'>Home</li>
+        <Link to='/'>
+          <li className='p-4'>Home</li>
+        </Link>
         <li className='p-4'>About</li>
         <li className='p-4'>Pricing</li>
         <li className='p-4'>Contact</li>
         <li className='p-4 font-bold text-xl'>Login</li>
-        <li className='p-4 font-bold text-xl bg-[#E9C368] rounded m-auto'>
-          Signup for free
-        </li>
+        <Link to='/auth/signup'>
+          <li className='p-4 font-bold text-xl bg-[#E9C368] rounded m-auto'>
+            Signup for free
+          </li>
+        </Link>
       </ul>
       <div onClick={handleNav} className='block md:hidden'>
         {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
