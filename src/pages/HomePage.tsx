@@ -5,6 +5,7 @@ import About from "../components/About";
 import Newsletter from "../components/NewLetter";
 import Testimoni from "../components/Testimoni";
 import testmoni from "../data/testimoni";
+import Contact from "../components/Contact";
 
 const HomePage = () => {
   return (
@@ -13,6 +14,8 @@ const HomePage = () => {
       <About />
       <Pricing />
       <Testimoni listTestimoni={testmoni} />
+      <Newsletter />
+      <Contact />
     </>
   );
 };

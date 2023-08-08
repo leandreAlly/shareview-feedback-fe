@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.16",
+    "@heroicons/react": "^2.0.18",
     "@types/postcss-import": "^14.0.0",
     "postcss-import": "^15.1.0",
     "react": "^18.2.0",

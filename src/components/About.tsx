@@ -21,7 +21,7 @@ const About = () => {
             experience extraordinary. Join us on this journey, and let's shape a
             brighter future, one feedback at a time
           </p>
-          <button className='bg-black text-[#64B937] w-[200px] rounded-md font-medium my-6 mx-auto md:mx-0 py-3'>
+          <button className='bg-black text-[#64B937] border border-black w-[200px] rounded-md font-medium my-6 mx-auto md:mx-0 py-3 hover:bg-white hover:text-black hover:border-black transition-all'>
             Get Started
           </button>
         </div>

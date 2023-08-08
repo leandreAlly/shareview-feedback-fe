@@ -2,29 +2,45 @@ import React from "react";
 
 const Newsletter = () => {
   return (
-    <div className='w-full py-16 text-black px-4'>
-      <div className='max-w-[1240px] mx-auto grid lg:grid-cols-3'>
-        <div className='lg:col-span-2 my-4'>
-          <h1 className='md:text-4xl sm:text-3xl text-2xl font-bold py-2'>
-            Want tips & tricks to optimize your flow?
-          </h1>
-          <p>Sign up to our newsletter and stay up to date.</p>
-        </div>
-        <div className='my-4'>
-          <div className='flex flex-col sm:flex-row items-center justify-between w-full'>
-            <input
-              className='p-3 flex w-full border-neutral-900 rounded-md text-black'
-              type='email'
-              placeholder='Enter Email'
-            />
-            <button className='bg-[#00df9a] text-black rounded-md font-medium w-[200px] ml-4 my-6 px-6 py-3'>
-              Notify Me
-            </button>
+    <div className='bg-white'>
+      <div className='mx-auto max-w-7xl py-12 px-6 lg:py-16 lg:px-8'>
+        <div className='rounded-lg bg-gray-800 px-6 py-6 md:py-12 md:px-12 lg:py-16 lg:px-16 xl:flex xl:items-center'>
+          <div className='xl:w-0 xl:flex-1'>
+            <h2 className='text-2xl font-bold tracking-tight text-white sm:text-3xl'>
+              Want product news and updates?
+            </h2>
+            <p className='mt-3 max-w-3xl text-lg leading-6 text-indigo-200'>
+              Sign up for our newsletter to stay up to date.
+            </p>
           </div>
-          <p>
-            We care bout the protection of your data. Read our{" "}
-            <span className='text-[#00df9a]'>Privacy Policy.</span>
-          </p>
+          <div className='mt-8 sm:w-full sm:max-w-md xl:mt-0 xl:ml-8'>
+            <form className='sm:flex'>
+              <label htmlFor='email-address' className='sr-only'>
+                Email address
+              </label>
+              <input
+                id='email-address'
+                name='email-address'
+                type='email'
+                autoComplete='email'
+                required
+                className='w-full rounded-md border-white px-5 py-3 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-700'
+                placeholder='Enter your email'
+              />
+              <button
+                type='submit'
+                className='mt-3 flex w-full items-center justify-center rounded-md border border-transparent bg-[#64B937] px-5 py-3 text-base font-medium text-white shadow hover:bg-[#228B22] focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-700 sm:mt-0 sm:ml-3 sm:w-auto sm:flex-shrink-0'
+              >
+                Notify me
+              </button>
+            </form>
+            <p className='mt-3 text-sm text-indigo-200'>
+              We care about the protection of your data. Read our{" "}
+              <a href='#' className='font-medium text-white underline'>
+                Privacy Policy.
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </div>

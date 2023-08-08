@@ -17,7 +17,7 @@ const Hero = () => {
         <p className='md:text-2xl text-xl font-bold text-gray-500'>
           Feedback at its Finest. Empowering Change, One Response at a Time.
         </p>
-        <button className='bg-[#64B937] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black'>
+        <button className='bg-[#64B937] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black hover:bg-[#228B22]'>
           Get Started
         </button>
       </div>
