@@ -1,7 +1,7 @@
-import middleImage from "../../assets/5920.jpg";
-import SignupForm from "../../components/form/SignupForm";
+import middleImage from "../../assets/loginfrayer.jpg";
+import LoginForm from "../../components/form/loginForm";
 
-const SignupPage = () => {
+const SigninPage = () => {
   return (
     <div>
       <div className='flex flex-col w-full md:flex-row md:h-full md:justify-between justify-center items-center xs:flex-grow recursive'>
@@ -16,7 +16,7 @@ const SignupPage = () => {
         </div>
 
         <div className='flex flex-col max-w-sm w-full mx-20'>
-          <SignupForm />
+          <LoginForm />
           <div className='flex items-center justify-center gap-2'>
             <hr className='flex-grow border-gray-300 border-t ' />
             <span className='px-4 text-[#ACADAC]'>Or continue with</span>
@@ -31,4 +31,4 @@ const SignupPage = () => {
     </div>
   );
 };
-export default SignupPage;
+export default SigninPage;

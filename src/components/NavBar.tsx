@@ -22,11 +22,14 @@ const Navbar = () => {
         <li className='p-4'>About</li>
         <li className='p-4'>Pricing</li>
         <li className='p-4'>Contact</li>
-        <li className='p-4 font-bold text-xl'>Login</li>
+        <Link to='/auth/signin'>
+          <li className='p-4 font-bold text-xl'>Login</li>
+        </Link>
+
         <Link to='/auth/signup'>
-          <li className='p-4 font-bold text-xl bg-[#E9C368] rounded m-auto'>
+          <div className='p-4 font-bold text-xl bg-[#E9C368] rounded m-auto hover:bg-[#FFC300] transition-all'>
             Signup for free
-          </li>
+          </div>
         </Link>
       </ul>
       <div onClick={handleNav} className='block md:hidden'>
