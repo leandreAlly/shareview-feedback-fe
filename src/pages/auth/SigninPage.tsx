@@ -5,12 +5,6 @@ const SigninPage = () => {
   return (
     <div>
       <div className='flex flex-col w-full md:flex-row md:h-full md:justify-between justify-center items-center xs:flex-grow recursive'>
-        {/* <img
-          src={bgImage}
-          alt=''
-          className='absolute inset-x-0 bottom-0 pointer-events-none'
-        /> */}
-
         <div className='hidden mx-auto sm:flex w-[500px]'>
           <img src={middleImage} alt='' />
         </div>
