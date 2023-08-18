@@ -17,9 +17,7 @@ const ForgotPassPage = () => {
             <hr className='flex-grow border-gray-300 border-t' />
           </div>
           <div className='flex items-center justify-center mt-4'></div>
-          <div className='flex items-center justify-center mt-4'>
-            {/* <GoogleLogin /> */}
-          </div>
+          <div className='flex items-center justify-center mt-4'></div>
         </div>
       </div>
     </div>

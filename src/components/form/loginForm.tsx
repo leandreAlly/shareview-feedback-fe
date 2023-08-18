@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
 const LoginForm: React.FC = () => {
   return (
@@ -61,12 +61,12 @@ const LoginForm: React.FC = () => {
             />
           </div>
           <div>
-            <a
-              href='/auth/forget-password'
+            <Link
+              to={"/auth/forget-password"}
               className=' flex justify-end text-[#2D719D] text-[14px] my-2'
             >
               Forget password ?
-            </a>
+            </Link>
           </div>
 
           <div className='mt-6'>
