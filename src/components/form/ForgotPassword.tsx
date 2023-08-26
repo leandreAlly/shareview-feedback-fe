@@ -1,3 +1,5 @@
+import Button from "./Button";
+
 const ForgotPassword = () => {
   return (
     <div className='bg-white dark:bg-gray-900 '>
@@ -32,13 +34,7 @@ const ForgotPassword = () => {
             />
           </div>
           <div className='mt-6'>
-            <button
-              className='w-full px-6 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50'
-              type='button'
-            >
-              Forget Password
-            </button>
-
+            <Button type='submit' label='Forget Password' className='my-1' />
             <div className='mt-6 text-center '>
               <a
                 href='#'

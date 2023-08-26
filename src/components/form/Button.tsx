@@ -12,7 +12,7 @@ const Button = ({ parentClassName, label = "", ...props }: ButtonProps) => (
       type={props.type}
       onClick={props.onClick}
       disabled={props.disabled}
-      className={`w-full my-2 h-[45px] rounded-md bg-[#2D719D] py-2 px-3 text-sm font-semibold text-white hover:bg-[#2198e7] ${props.className}`}
+      className={`w-full px-6 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50 ${props.className}`}
       role={props.role}
     >
       {label} {props.children}
