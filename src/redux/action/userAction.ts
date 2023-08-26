@@ -13,8 +13,18 @@ export const registerUser = createAsyncThunk(
         userData
       );
       return response.data;
-    } catch (error) {
-      return thunkAPI.rejectWithValue(error);
+    } catch (error: any) {
+      if (
+        error.response &&
+        error.response.data &&
+        error.response.data.message
+      ) {
+        return thunkAPI.rejectWithValue(error.response.data.message);
+      } else {
+        return thunkAPI.rejectWithValue(
+          "Registration failed. Please try again."
+        );
+      }
     }
   }
 );

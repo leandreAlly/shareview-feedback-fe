@@ -23,19 +23,17 @@ const userSlice = createSlice({
         state.loading = true;
         state.error = null;
       })
-      .addCase(
-        registerUser.fulfilled,
-        (state, action: PayloadAction<UserRegister>) => {
-          state.loading = false;
-          state.data.push(action.payload);
-          state.error = null;
-          toast.success("Registration successful!");
-        }
-      )
-      .addCase(registerUser.rejected, (state) => {
+      .addCase(registerUser.fulfilled, (state, action: PayloadAction<any>) => {
         state.loading = false;
+        state.data = action.payload;
         state.error = null;
-        toast.error("Registration failed. Please try again.");
+        toast.success(action.payload.message);
+      })
+      .addCase(registerUser.rejected, (state, action: PayloadAction<any>) => {
+        state.loading = false;
+
+        state.error = action.payload;
+        toast.error(action.payload);
       });
   },
 });

@@ -4,7 +4,7 @@ import userReducer from "../reducers/userSlice";
 
 const store = configureStore({
   reducer: {
-    userReducer,
+    user: userReducer,
   },
   middleware: [...getDefaultMiddleware(), thunk],
 });
