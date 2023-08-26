@@ -8,12 +8,13 @@ import router from "./router";
 import { Provider } from "react-redux";
 import store from "./redux/store/store";
 import "react-toastify/dist/ReactToastify.css";
+import App from "./router";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <Provider store={store}>
       <ToastContainer />
-      <RouterProvider router={router} />
+      <App />
     </Provider>
   </React.StrictMode>
 );

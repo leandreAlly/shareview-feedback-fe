@@ -29,10 +29,10 @@ export const registerUser = createAsyncThunk(
   }
 );
 
-export const verifyUserAccount = async (token: string) => {
+export const verifyUserAccount = async (token: any) => {
   try {
     const response = await axios.get(
-      `${BASE_API_URL}/users/verify-email?t=${token}`
+      `${BASE_API_URL}users/verify-email/${token}`
     );
     return response.data;
   } catch (error) {

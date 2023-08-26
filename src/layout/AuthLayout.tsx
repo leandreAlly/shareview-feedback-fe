@@ -7,11 +7,9 @@ const AuthLayout = () => {
   return (
     <>
       <Header />
-      <Navbar />
       <main>
         <Outlet />
       </main>
-      <Footer />
     </>
   );
 };

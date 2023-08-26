@@ -1,9 +1,10 @@
 import { createSlice, PayloadAction, createAsyncThunk } from "@reduxjs/toolkit";
+import { toast } from "react-toastify";
 import { verifyUserAccount } from "../action/userAction";
 
 export const verifyAccount = createAsyncThunk(
   "verify/verifyAccount",
-  async (token: string, { rejectWithValue }) => {
+  async (token: any, { rejectWithValue }) => {
     try {
       const response = await verifyUserAccount(token);
       return response;
@@ -16,6 +17,7 @@ export const verifyAccount = createAsyncThunk(
 const initialState = {
   loading: false,
   error: null,
+  data: null,
   message: null,
 };
 
@@ -34,11 +36,14 @@ const verifySlice = createSlice({
       })
       .addCase(verifyAccount.fulfilled, (state, action: PayloadAction<any>) => {
         state.loading = false;
-        state.message = action.payload;
+        state.data = action.payload;
+        state.message = action.payload.message;
+        toast.success(action.payload.message);
       })
       .addCase(verifyAccount.rejected, (state, action: PayloadAction<any>) => {
         state.loading = false;
         state.error = action.payload;
+        toast.error(action.payload.message);
       });
   },
 });
