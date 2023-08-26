@@ -28,3 +28,14 @@ export const registerUser = createAsyncThunk(
     }
   }
 );
+
+export const verifyUserAccount = async (token: string) => {
+  try {
+    const response = await axios.get(
+      `${BASE_API_URL}/users/verify-email?t=${token}`
+    );
+    return response.data;
+  } catch (error) {
+    throw new Error("Failed to verify user account");
+  }
+};
