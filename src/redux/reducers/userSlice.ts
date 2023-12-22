@@ -31,9 +31,8 @@ const userSlice = createSlice({
       })
       .addCase(registerUser.rejected, (state, action: PayloadAction<any>) => {
         state.loading = false;
-
         state.error = action.payload;
-        toast.error(action.payload);
+        toast.error(action.payload.message);
       });
   },
 });
